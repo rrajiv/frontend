@@ -1,0 +1,19 @@
+<html> 
+<head>         
+<title>Critical Path: Measure</title>
+        <script>
+          function MeasurePerf()
+          {
+              var wpt = window.performance.timing;
+              console.log(wpt);
+              var ct = new Date().getTime();
+              console.log("loading time = " + (ct - wpt.navigationStart) + "ms");
+        
+          } // end function
+        </script>
+      </head>
+      <body onload="MeasurePerf()">
+        <p>Check console.log</p>
+         
+      </body>
+</html>
